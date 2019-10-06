@@ -20,7 +20,7 @@
                 <li class="nav-item"><a href="{{ route('users.followers', ['id' => $user->id]) }}" class="nav-link {{ Request::is('users/*/followers') ? 'active' : '' }}">Followers <span class="badge badge-secondary">{{ $count_followers }}</span></a></li>
                 <li class="nav-item"><a href="{{ route('users.favoritings', ['id' => $user->id]) }}" class="nav-link {{ Request::is('users/*/favoritings') ? 'active' : '' }}">Favoritings <span class="badge badge-secondary">{{ $count_favoritings }}</span></a></li>
             </ul>
-            @include('users.users', ['users' => $users])
+            @include('microposts.microposts', ['microposts' => $microposts])
         </div>
     </div>
 @endsection
